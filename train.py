@@ -48,7 +48,7 @@ def main():
         loaded_vocab=tokenizer,
         model_emb=model_weight # use model's weights as init
     )
-    next(data)
+    # next(data)
 
     data_valid = load_data_text(
         batch_size=args.batch_size,

@@ -1,0 +1,33 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="train" type="PythonConfigurationType" factoryName="Python">
+    <module name="DiffuSeq" />
+    <option name="INTERPRETER_OPTIONS" value="-m torch.distributed.launch --nproc_per_node=1 --master_port=12233 --use_env" />
+    <option name="PARENT_ENVS" value="true" />
+    <envs>
+      <env name="PYTHONUNBUFFERED" value="1" />
+      <env name="LOCAL_RANK" value="0" />
+      <env name="OPENAI_LOGDIR" value="diffusion_models/diffuseq_CommonsenseConversation_h128_lr0.0001_t2000_sqrt_lossaware_seed102_test-CommonsenseConversation20240110-23_26_00" />
+      <env name="TOKENIZERS_PARALLELISM" value="false" />
+    </envs>
+    <option name="SDK_HOME" value="" />
+    <option name="SDK_NAME" value="DiffuSeq (2)" />
+    <option name="WORKING_DIRECTORY" value="" />
+    <option name="IS_MODULE_SDK" value="false" />
+    <option name="ADD_CONTENT_ROOTS" value="true" />
+    <option name="ADD_SOURCE_ROOTS" value="true" />
+    <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+    <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.PythonAwsConnectionExtension">
+      <option name="credential" />
+      <option name="region" />
+      <option name="useCurrentConnection" value="false" />
+    </EXTENSION>
+    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+    <option name="PARAMETERS" value="--checkpoint_path diffusion_models/diffuseq_CommonsenseConversation_h128_lr0.0001_t2000_sqrt_lossaware_seed102_test-CommonsenseConversation20240110-23_26_00 --dataset CommonsenseConversation --data_dir /mnt/e/CEIA/Diffusion/DiffuSeq/datasets/CommonsenseConversation --vocab bert --use_plm_init no --lr 0.0001 --batch_size 2048 --microbatch 64 --diffusion_steps 2000 --noise_schedule sqrt --schedule_sampler lossaware --resume_checkpoint none --seq_len 128 --hidden_t_dim 128 --seed 102 --hidden_dim 128 --learning_steps 50000 --save_interval 10000 --config_name bert-base-uncased --notes test-CommonsenseConversation20240110-23_26_00" />
+    <option name="SHOW_COMMAND_LINE" value="false" />
+    <option name="EMULATE_TERMINAL" value="false" />
+    <option name="MODULE_MODE" value="false" />
+    <option name="REDIRECT_INPUT" value="false" />
+    <option name="INPUT_FILE" value="" />
+    <method v="2" />
+  </configuration>
+</component>
